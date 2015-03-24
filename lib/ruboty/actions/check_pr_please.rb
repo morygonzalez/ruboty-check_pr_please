@@ -1,4 +1,4 @@
-module Rubory
+module Ruboty
   module Actions
     class CheckPrPlease < Base
       def call
