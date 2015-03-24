@@ -1,6 +1,6 @@
 module Rubory
   module Actions
-    class ApprovePrPlease
+    class CheckPrPlease
       def call
         message.reply(begging_message)
       end
@@ -8,24 +8,20 @@ module Rubory
       private
 
       def client
-        @client ||= Octokit::Client.new(login: login, password: password)
+        @client ||= Octokit::Client.new(access_token: access_token)
       end
 
-      def login
-        @login ||= ''
-      end
-
-      def password
-        @password ||= ''
+      def access_token
+        @access_token ||= ENV['GITHUB_ACCESS_TOKEN']
       end
 
       def label
-        @label ||= ''
+        @label ||= ENV['GITHUB_PR_LABEL']
       end
 
       def begging_message
         return false unless uncheckd_pull_requests.present?
-        '未承認の Pull Request があります！！、！' << un_checkd_pull_requests.join(' ')
+        '未確認の Pull Request があります！！、！' << un_checkd_pull_requests.join(' ')
       end
 
       def uncheckd_pull_requests

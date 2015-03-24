@@ -5,7 +5,7 @@ require 'ruboty/check_pr_please/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "ruboty-check_pr_please"
-  spec.version       = Ruboty::ApprovePrPlease::VERSION
+  spec.version       = Ruboty::CheckPrPlease::VERSION
   spec.authors       = ["森井ゴンザレス"]
   spec.email         = ["morygonzalez@gmail.com"]
   spec.summary       = %q{TODO: Write a short summary. Required.}

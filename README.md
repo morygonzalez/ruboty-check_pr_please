@@ -1,4 +1,4 @@
-# Ruboty::ApprovePrPlease
+# Ruboty::CheckPrPlease
 
 TODO: Write a gem description
 
