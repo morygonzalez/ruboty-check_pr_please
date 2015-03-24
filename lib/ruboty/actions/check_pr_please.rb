@@ -2,7 +2,7 @@ module Rubory
   module Actions
     class CheckPrPlease
       def call
-        message.reply(begging_message)
+        robot.say(begging_message)
       end
 
       private
@@ -15,18 +15,25 @@ module Rubory
         @access_token ||= ENV['GITHUB_ACCESS_TOKEN']
       end
 
+      def repository
+        @repository ||= ENV['GITHUB_REPOSITORY']
+      end
+
       def label
         @label ||= ENV['GITHUB_PR_LABEL']
       end
 
       def begging_message
-        return false unless uncheckd_pull_requests.present?
-        '未確認の Pull Request があります！！、！' << un_checkd_pull_requests.join(' ')
+        return false unless unchecked.present?
+        str = "未確認の Pull Request が #{unchecked.count} 件あります！！、！\n>>> "
+        unchecked.each do |pr|
+          str << "#{pr.title} #{pr.pull_request.html_url}\n"
+        end
+        str.chomp
       end
 
-      def uncheckd_pull_requests
-        uncheckd = client.issues '', labels: label
-        uncheckd.map {|pr| "#{pr.title} #{pr.pull_request.html_url}" }
+      def unchecked
+        client.issues(repository, labels: label)
       end
     end
   end
