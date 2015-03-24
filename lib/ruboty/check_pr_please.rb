@@ -1,4 +1,4 @@
-require "ruboty/approve_pr_please/version"
+require "ruboty/check_pr_please/version"
 
 module Ruboty
   module ApprovePrPlease
