@@ -2,7 +2,7 @@ module Ruboty
   module Actions
     class CheckPrPlease < Base
       def call
-        robot.say(begging_message)
+        message.reply(begging_message)
       end
 
       private
@@ -20,7 +20,7 @@ module Ruboty
       end
 
       def label
-        @label ||= ENV['GITHUB_PR_LABEL']
+        @label ||= message.match_data.captures.first.to_s
       end
 
       def begging_message
