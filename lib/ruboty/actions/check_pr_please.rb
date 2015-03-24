@@ -1,6 +1,6 @@
 module Rubory
   module Actions
-    class CheckPrPlease
+    class CheckPrPlease < Base
       def call
         robot.say(begging_message)
       end

@@ -1,6 +1,6 @@
 module Ruboty
   module Handlers
-    class CheckPrPlease
+    class CheckPrPlease < Base
       on(
         /(.+)の\s?(?:Pull Request|PR|プルリク)/,
         name: 'check_pr_please',
