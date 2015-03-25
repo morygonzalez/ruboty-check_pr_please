@@ -2,7 +2,7 @@ module Ruboty
   module Handlers
     class CheckPrPlease < Base
       on(
-        /(.+)の\s?(?:Pull Request|PR|プルリク)/,
+        /(.+)の\s?(?:Pull Request|PR|プルリク|プルリクエスト)/,
         name: 'check_pr_please',
         description: 'label の Pull Request 一覧を返します'
       )
