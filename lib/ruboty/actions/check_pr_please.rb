@@ -8,7 +8,7 @@ module Ruboty
       private
 
       def client
-        @client ||= Octokit::Client.new(access_token: access_token)
+        @client ||= ::Octokit::Client.new(access_token: access_token)
       end
 
       def access_token
