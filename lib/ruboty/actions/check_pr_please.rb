@@ -20,7 +20,7 @@ module Ruboty
       end
 
       def label
-        @label ||= message.match_data.captures.first.to_s.strip
+        @label ||= message[:label]
       end
 
       def begging_message
