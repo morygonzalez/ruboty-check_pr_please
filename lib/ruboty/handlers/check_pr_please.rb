@@ -9,6 +9,8 @@ module Ruboty
 
       def check_pr_please(message)
         Ruboty::Actions::CheckPrPlease.new(message).call
+      rescue Exception => e
+        Ruboty.logger.info "#{e.class}: #{e.message}"
       end
     end
   end
