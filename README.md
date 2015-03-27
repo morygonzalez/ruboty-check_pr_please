@@ -1,6 +1,13 @@
 # Ruboty::CheckPrPlease
 
-TODO: Write a gem description
+ruboty plugin that demand you to review labeled Pull Requests on GitHub repository.
+
+![](http://resources.portalshit.net/ruboty-check_pr_please_1.png)  
+![](http://resources.portalshit.net/ruboty-check_pr_please_2.png)
+
+Blog entry introduces this them.
+
+[Pull Request のレビューを促す ruboty プラグイン - portal shit!](http://portalshit.net/2015/03/25/ruboty-check-pr-please)
 
 ## Installation
 
@@ -20,7 +27,10 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+1. Write just just like `gem 'ruboty-check_pr_please', github: 'morygonzalez/ruboty-check_pr_please'` in your ruboty bot's Gemfile.
+  - You need to install ruboty-cron.gem if you want this gem to work periodically.
+2. Write `GITHUB_ACCESS_TOKEN='yourtokengoeshere'` and `GITHUB_REPOSITORY='owner/repo'` to your ruboty bot's .env file.
+3. Deploy ruboty bot.
 
 ## Contributing
 
