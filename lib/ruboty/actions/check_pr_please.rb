@@ -25,7 +25,7 @@ module Ruboty
 
       def begging_message
         return unless unchecked.present?
-        str = "未確認の Pull Request が #{unchecked.count} 件あります！！、！\n>>> "
+        str = "#{label} の Pull Request が #{unchecked.count} 件あります！！、！\n>>> "
         unchecked.each do |pr|
           str << "#{pr.title} #{pr.pull_request.html_url}\n"
         end
