@@ -5,7 +5,7 @@ ruboty plugin that demand you to review labeled Pull Requests on GitHub reposito
 ![](http://resources.portalshit.net/ruboty-check_pr_please_1.png)  
 ![](http://resources.portalshit.net/ruboty-check_pr_please_2.png)
 
-Blog entry introduces this them.
+Blog entry introduces this gem (in Japanese).
 
 [Pull Request のレビューを促す ruboty プラグイン - portal shit!](http://portalshit.net/2015/03/25/ruboty-check-pr-please)
 
