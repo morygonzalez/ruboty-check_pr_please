@@ -16,7 +16,7 @@ module Ruboty
       end
 
       def repository
-        @repository ||= ENV['GITHUB_REPOSITORY']
+        @repository ||= (message[:repo] || ENV['GITHUB_REPOSITORY']).strip
       end
 
       def label
