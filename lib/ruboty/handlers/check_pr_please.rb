@@ -8,9 +8,9 @@ module Ruboty
       )
 
       on(
-          /((?<repo>.*)\s?にある)?\s?(?<label>.+)の\s?(?:Pull Request|PR|プルリク|プルリクエスト)/,
-          name: 'check_pr_please',
-          description: 'repo にある label の Pull Request 一覧を返します'
+        /((?<repo>.*)\s?にある)?\s?(?<label>.+)の\s?(?:Pull Request|PR|プルリク|プルリクエスト)/,
+        name: 'check_pr_please',
+        description: 'repo にある label の Pull Request 一覧を返します'
       )
 
       def check_pr_please(message)
